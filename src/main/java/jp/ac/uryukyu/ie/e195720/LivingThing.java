@@ -40,7 +40,7 @@ public class LivingThing {
     }
     public void attack(LivingThing opponent) {
         int damage = (int) (Math.random() * attack);
-        if (hitPoint > 0) {
+        if (hitPoint >= 0) {
             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
             opponent.wounded(damage);
         }
