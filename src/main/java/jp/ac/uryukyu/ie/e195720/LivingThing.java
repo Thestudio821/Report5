@@ -27,9 +27,7 @@ public class LivingThing {
     String getName() {
         return name;
     }
-    public void setName(String opponent) {
-        this.name = opponent;
-    }
+
     int getHitPoint() {
         return hitPoint;
     }
@@ -37,6 +35,11 @@ public class LivingThing {
         this.hitPoint = HP;
     }
 
+    /**
+     * 倒した敵から得られるご褒美。
+     * @return
+     * ステータス内に値が保管されている。
+     */
     public int getExperience(){
         return experience;
     }
@@ -44,6 +47,7 @@ public class LivingThing {
     /**
      * HPが0になるまで攻撃するよ
      * @param opponent
+     * 攻撃の対象。
      */
     public void attack(LivingThing opponent) {
         int damage = (int) (Math.random() * attack);
@@ -56,6 +60,7 @@ public class LivingThing {
     /**
      * HPが0以下になると負け（死亡）する
      * @param damage
+     * attackを実行した時に生成された相手にダメージを与える値
      */
     public void wounded(int damage) {
         String name = getName();
