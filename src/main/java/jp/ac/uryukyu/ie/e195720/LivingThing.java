@@ -6,7 +6,9 @@ public class LivingThing {
     private int attack;
     private int experience;
     private boolean dead;
-
+/**
+ *基本的アルゴリズム
+ */
     LivingThing(String name, int maximumHP, int attack, int experience) {
         this.name = name;
         hitPoint = maximumHP;
