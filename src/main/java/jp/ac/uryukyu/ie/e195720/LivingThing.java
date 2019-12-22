@@ -40,6 +40,11 @@ public class LivingThing {
     public int getExperience(){
         return experience;
     }
+
+    /**
+     * HPが0になるまで攻撃するよ
+     * @param opponent
+     */
     public void attack(LivingThing opponent) {
         int damage = (int) (Math.random() * attack);
         if (hitPoint > 0) {
@@ -48,6 +53,10 @@ public class LivingThing {
         }
     }
 
+    /**
+     * HPが0以下になると負け（死亡）する
+     * @param damage
+     */
     public void wounded(int damage) {
         String name = getName();
         int experience = getExperience();
