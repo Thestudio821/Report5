@@ -1,14 +1,16 @@
 package jp.ac.uryukyu.ie.e195720;
 
+/**
+ * 対象の基本ステータス
+ * 名称、HP、攻撃力、被倒時の経験値
+ */
 public class LivingThing {
     private String name;
     private int hitPoint;
     private int attack;
     private int experience;
     private boolean dead;
-/**
- *基本的アルゴリズム
- */
+
     LivingThing(String name, int maximumHP, int attack, int experience) {
         this.name = name;
         hitPoint = maximumHP;
